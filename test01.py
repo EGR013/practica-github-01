@@ -22,3 +22,4 @@ var5=int(input("introduce un numero: "))
 var6=int(input("introduce otro numero: "))
 total02=var5+var6
 print("el resultado es..... ",total02,)
+print("hecho por Erik Garcia")
