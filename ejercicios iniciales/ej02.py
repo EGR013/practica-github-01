@@ -1,4 +1,4 @@
-
+#2. Programa que introduzca por teclado tres tipos de variables y se muestren por pantallaen el siguiente orden: número entero, texto y número decimal.
 
 var1=int(input("introduce un numero no decimal: "))
 

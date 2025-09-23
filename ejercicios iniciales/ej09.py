@@ -1,4 +1,4 @@
-
+#9. programa que pida los segundos y muestre por pantalla y en la misma frase los minutos y las horas
 import math
 
 segundos=int(input("introduce unos segundos: "))

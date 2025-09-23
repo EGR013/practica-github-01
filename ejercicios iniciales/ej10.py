@@ -1,4 +1,4 @@
-
+#10. Introduce por teclado dos números y muestre por pantalla la siguiente información: cociente, resto y si el dividendo es par o impar
 var1=int(input("introduce un numero: "))
 var2=int(input("introduce otro numero: "))
 total1=var1//var2
