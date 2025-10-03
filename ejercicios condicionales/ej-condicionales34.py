@@ -1,0 +1,1 @@
+#32 es la actual (eliminar mas trade)
