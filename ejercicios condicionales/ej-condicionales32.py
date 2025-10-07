@@ -2,6 +2,9 @@
 frasemagik=("A quién madruga Dios ayuda")
 word=str(input("introduce una palabra "))
 
+frasemagik=frasemagik.lower()
+word=word.lower()
+
 if word in frasemagik:
     print("la palabra esta dento de la frase A quién madruga Dios ayuda")
 if word not in frasemagik:
