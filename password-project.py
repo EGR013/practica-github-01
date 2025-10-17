@@ -1,0 +1,8 @@
+print("es hora de crear una contraseña segura i fiable")
+print("INSTRUCIONES")
+print("  1.la longitud de el password tiene que ser entre 6 i 8 caracteres")
+print("  2.forçar los siguientes valores segun la possicion indicada:")
+print("     posicion 1: un numero mayor o igual a 1 i menor o igual a 5")
+print("     posicion 2: una letra minuscula")
+print("     posicion 3: una letra mayuscula")
+print("     posicion 4: un dels seguents simbols *, _,@")
