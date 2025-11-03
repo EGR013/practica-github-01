@@ -28,19 +28,32 @@ if len(password) >= 6 and len(password)<=8:
         errores=errores + 1
     if password[1].isalpha() and password[1].islower():
        print("a") , posicion2=""
+    else:
+        errores=errores + 1
     if password[2].isalpha() and password[2].isupper():
         print("a") , posicion3=""
+    else:
+        errores=errores+1
     if password[3] in ("*_@"):
         print("a") , posicion4=""
+    else:
+        errores=errores+1
     if password[4].isalpha() and password[4].islower():
         print("a") , posicion5=""
+    else:
+        errores=errores+1
     if password[5]>= 6  and password[5]<=9:
         print("a") , posicion6=""
+    else:
+        errores=errores+1
     if password[6] in ("&/#"):
         print("a") , posicion7=""
+    else:
+        errores=errores+1
     if password[7]<=5:
         print("a") , posicion8=""
-    
+    else:
+        errores=errores+1
 else:
     print("esta contraseña no es apropiada intentalo de nuevo")
     
