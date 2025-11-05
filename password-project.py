@@ -1,4 +1,6 @@
+#saludo
 print("Hola usuario!,es hora de crear una contraseña segura i fiable")
+#datos iniciales
 errores=0
 posicion1="posicion 1"
 posicion2="posicion 2"
@@ -8,6 +10,7 @@ posicion5="posicion 5"
 posicion6="posicion 6"
 posicion7="posicion 7"
 posicion8="posicion 8"
+#instruciones
 print("INSTRUCIONES")
 print("  1.la longitud de el password tiene que ser entre 6 i 8 caracteres")
 print("  2.forçar los siguientes valores segun la possicion indicada:")
@@ -19,16 +22,18 @@ print("     Posicion 5: una lletra minuscula")
 print("     posicion 6: un numero major o igual a 6 i menor o igual a 9")
 print("     posicion 7: un dels seguents simbols: &,/,#")
 print("     posicion 8: un numero menor o igual que 5")
+#input de password
 password=(input("muy bien ya sabes las normas hora de introducir tu password!: "))
-p0=float(password[0])
-p1=password[1]
-p2=password[2]
-p3=password[3]
-p4=password[4]
-p5=float(password[5])
-p6=password[6]
-p7=float(password[7])
+#checkeo de password
 if (len(password)>=6) and (len(password)<=8):
+    p0=float(password[0])
+    p1=password[1]
+    p2=password[2]
+    p3=password[3]
+    p4=password[4]
+    p5=float(password[5])
+    p6=password[6]
+    p7=float(password[7])
     if p0<=5 and p0>=1:
         posicion1=("")
     else:
@@ -61,6 +66,7 @@ if (len(password)>=6) and (len(password)<=8):
         posicion8=("")
     else:
         errores=errores + 1 
+        #resultados finales
     if errores==0:
      print("este password es correcto , felicidades! esperamos que esto te ayude a tener mas seguridad digital")
     else:
