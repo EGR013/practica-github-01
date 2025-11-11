@@ -8,4 +8,4 @@ for i in range(1,51):
     else:
         inpar=inpar+1
     numero=numero+1
-
+print("el numero de pares es: ",par,"el numero de inpares es: ",inpar)
