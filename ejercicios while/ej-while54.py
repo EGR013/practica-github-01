@@ -7,12 +7,11 @@ while again==1:
     num2=int(input("introduce otro numero entero: "))
     suma=num1+num2
     print(suma)
+    print(sumatotal)
     repeticiones=repeticiones+1
     sumatotal=sumatotal+suma
-    choice=int(input("quieres repetir la operacion si(1) o no(2)?: "))
-    if choice==2:
-        print("has heco: ",repeticiones,"repeticiones i la suma total es: ",sumatotal)
+    if sumatotal>50:
+        print("has hecho: ",repeticiones,"repeticiones i la suma total es: ",sumatotal)
         break  
     else:
         continue
-#incompleto actualmente
