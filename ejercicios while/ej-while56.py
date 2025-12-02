@@ -12,8 +12,11 @@ print("1. Coca cola - 2 €")
 print("2. Acuarius - 1.5 €")
 print("3. Agua - 1 €")
 repeat=1
+pedidos=0
+suma=0
 while repeat==1:
-    selection1=int(input("seleciona el bocadillo que quieres (por numero no nombre): "))
+    pedidos=pedidos+1
+    selection1=float(input("seleciona el bocadillo que quieres (por numero no nombre): "))
     if selection1>3 or selection1<1:
         print("numero no presente en el menu")
         break
@@ -23,4 +26,41 @@ while repeat==1:
         selection1=4.5
     if selection1==3:
         selection1=2.5
-    selection2=int(input("seleciona el acompañamiento que deseas (por numero no por nombre): ")) 
+    selection2=float(input("seleciona el acompañamiento que deseas (por numero no por nombre): ")) 
+    if selection2>3 or selection2<1:
+        print("numero no presente en el menu")
+        break
+    if selection2==1:
+        selection2=1.5
+    if selection2==2:
+        selection2=1.75
+    if selection2==3:
+        selection2=2
+    selection3=float(input("seleciona la bebida que deseas (por numero no nombre)"))
+    if selection3>3 or selection3<1:
+        print("numero no presente en el menu")
+        break
+    if selection3==1:
+        selection3=2
+    if selection3==2:
+        selection3=1.5
+    if selection3==3:
+        selection3==1
+    suma=suma+selection1+selection2+selection3
+    choice=int(input("quieres continuar 1.si , 2.no (introducelo por numero): "))
+    if choice==2:
+        iva=suma+(suma%10)
+        if suma>19 or suma<31:
+            descuento=suma-(5%suma)
+            porcentaje=5
+        else:
+            descuento=suma-(15%suma)
+            porcentaje=15
+        print("pedidos totales: ",pedidos)
+        print("total a pagar: ",suma)
+        print("total con iva: ",iva)
+        print("total con descuento de ",porcentaje,"%: ",descuento)
+        break
+
+        
+
