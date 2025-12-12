@@ -20,7 +20,9 @@ simbols=0
 oneup5low=0
 minus=0
 mayus=0
-fs65=0
+fs75=0
+passworderror=0
+passwordSS=0
 #esto probablemente no sera usado per bueno
 posicion1="posicion 1"
 posicion2="posicion 2"
@@ -37,20 +39,43 @@ print("  2.tener un minimo de 2 simbolos (*, _, @, &,/,#)")
 print("  3.tener 2 numeros mayores o iguales que 1 i menores o iguales a 5")
 print("  4.tener un minimo de 2 letras minusculas")
 print("  5.un minimo de 1 letra mayuscula")
-print("  6.minimo 1 número menor o igual que 6 y mayor o igual que 5")
+print("  6.minimo 1 número menor o igual que 7 y mayor o igual que 5")
 place=0
 #input de password
-password=(input("muy bien hora de introducir tu password: "))
-length=len(password)
-#inicio de checkeo de password 
-if not (len(password)>=6) and (len(password)<=8):
-    print("longitud de password no valido")
-else:
-    for i in range(0,length):
-        select=password(place)
-        if select in ("*_@&/#"):
-            simbols=simbols+1
-        if select>=1 and select<=5:
-            oneup5low=oneup5low+1
-        if 
-        
+for i in range(0,3):
+    password=(input("muy bien hora de introducir tu password: "))
+    length=len(password)
+    #inicio de checkeo de password 
+    #dejo aqui un link a una web de informacion sobre phyton para facil aseso a ella https://www.w3schools.com/python/python_lists.asp
+    if not (len(password)>=6) and (len(password)<=8):
+        print("longitud de password no valido")
+        passworderror=passworderror+1
+    else:
+        simbols=0
+        oneup5low=0
+        minus=0
+        mayus=0
+        fs75=0
+        for i in range(0,length):
+            select=password[place]
+            if select in ("*_@&/#"):
+                simbols=simbols+1
+            if select>=1 and select<=5:
+                oneup5low=oneup5low+1
+            if select.isalpha():
+                select=str(select)
+                if select.islower():
+                    minus=minus+1
+                if select.isupper():
+                    mayus=mayus+1
+            if select>=5 or select<=7:
+                fs75=fs75+fs75
+            place=place+1
+    #recuento de requerimientos de el password 
+    if (simbols>=2) and (oneup5low>=2) and (minus>=2) and (mayus>=1) and (fs75>=1):
+        print("el password es correcto")
+        passwordSS=passwordSS+1
+    else:
+        print("este password no cumple con los requisitos i por lo tanto no es correcto")
+        passworderror=passworderror+1
+print("has creado 3 password este es tu total de passwords correctos i incorrectos,incorrectos: ",passworderror," correctos: ",passwordSS)
