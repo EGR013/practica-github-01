@@ -21,6 +21,7 @@ oneup5low=0
 minus=0
 mayus=0
 fs75=0
+#se llama fs75 porque antes la condicion era 1 numero menor o igual que 6 i mayor o igual que 5 entonses era f(five)s(six) pero lo cambie a 7 envez de 6
 passworderror=0
 passwordSS=0
 #esto probablemente no sera usado per bueno
@@ -60,16 +61,17 @@ for i in range(0,3):
             select=password[place]
             if select in ("*_@&/#"):
                 simbols=simbols+1
-            if select>=1 and select<=5:
-                oneup5low=oneup5low+1
+            if select.isnumeric():
+                if select>=1 and select<=5:
+                        oneup5low=oneup5low+1
+                if select>=5 or select<=7:
+                        fs75=fs75+fs75
             if select.isalpha():
                 select=str(select)
                 if select.islower():
                     minus=minus+1
                 if select.isupper():
                     mayus=mayus+1
-            if select>=5 or select<=7:
-                fs75=fs75+fs75
             place=place+1
     #recuento de requerimientos de el password 
     if (simbols>=2) and (oneup5low>=2) and (minus>=2) and (mayus>=1) and (fs75>=1):
@@ -79,3 +81,16 @@ for i in range(0,3):
         print("este password no cumple con los requisitos i por lo tanto no es correcto")
         passworderror=passworderror+1
 print("has creado 3 password este es tu total de passwords correctos i incorrectos,incorrectos: ",passworderror," correctos: ",passwordSS)
+#TESTEOS
+#CONTRASEÑA--SALIDA ESPERADA(contraseña erronia o correcta)
+
+#1.Av51@@o--contraseña correcta.
+#2.E75/&m---contraseña incorrecta.
+#3.L*s55----contraseña incorrecta.
+#4.I/@127ml-contraseña correcta.
+#5.@@@2#32--contraseña incorrecta.
+#6.S45nn#@--contraseña correcta.
+#7./Ih@v317-contraseña correcta.
+#8.55Thh#&--contraseña correcta.
+#9.@951&hIc-contraseña correcta.
+#10.Ey37/M1#b/7d-contraseña incorrecta.
