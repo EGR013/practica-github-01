@@ -57,15 +57,18 @@ for i in range(0,3):
         minus=0
         mayus=0
         fs75=0
+        place=0
         for i in range(0,length):
             select=password[place]
             if select in ("*_@&/#"):
                 simbols=simbols+1
             if select.isnumeric():
+                select=int(select)
                 if select>=1 and select<=5:
                         oneup5low=oneup5low+1
                 if select>=5 or select<=7:
-                        fs75=fs75+fs75
+                        fs75=fs75+1
+                select=str(select)
             if select.isalpha():
                 select=str(select)
                 if select.islower():
@@ -94,3 +97,12 @@ print("has creado 3 password este es tu total de passwords correctos i incorrect
 #8.55Thh#&--contraseña correcta.
 #9.@951&hIc-contraseña correcta.
 #10.Ey37/M1#b/7d-contraseña incorrecta.
+#el primera contraseña me ha dado el resultado esperado despues de arreglar unos errores generales en el programa he modificado para que [select] pueda cambie de modo(de int a str i de str a int) i he arreglado un error donde habia puesto fs75=fs75+fs75 envez de fs75=fs75+1
+#la segunda contraseña ha dado el resultado esperado sin complicaciones
+#la tercera contraseña ha dado el resultado esperado sin complicaciones
+#la cuarta contraseña ha dado el resultado esperado sin complicaciones
+#la quinta contraseña ha dado el resultado esperado sin complicaciones
+#la sexta contraseña ha dado el resultado esperado sin complicaciones
+#la septima contraseña ha dado el resultado esperado sin complicaciones
+#la octava contraseña ha dado el resultado esperado sin complicaciones
+#la novena contraseña ha dado el resultado esperado sin complicaciones
