@@ -48,7 +48,7 @@ for i in range(0,3):
     length=len(password)
     #inicio de checkeo de password 
     #dejo aqui un link a una web de informacion sobre phyton para facil aseso a ella https://www.w3schools.com/python/python_lists.asp
-    if not (len(password)>=6) and (len(password)<=8):
+    if (len(password)<6) or (len(password)>8):
         print("longitud de password no valido")
         passworderror=passworderror+1
     else:
@@ -77,12 +77,12 @@ for i in range(0,3):
                     mayus=mayus+1
             place=place+1
     #recuento de requerimientos de el password 
-    if (simbols>=2) and (oneup5low>=2) and (minus>=2) and (mayus>=1) and (fs75>=1):
-        print("el password es correcto")
-        passwordSS=passwordSS+1
-    else:
-        print("este password no cumple con los requisitos i por lo tanto no es correcto")
-        passworderror=passworderror+1
+        if (simbols>=2) and (oneup5low>=2) and (minus>=2) and (mayus>=1) and (fs75>=1):
+            print("el password es correcto")
+            passwordSS=passwordSS+1
+        else:
+            print("este password no cumple con los requisitos i por lo tanto no es correcto")
+            passworderror=passworderror+1
 print("has creado 3 password este es tu total de passwords correctos i incorrectos,incorrectos: ",passworderror," correctos: ",passwordSS)
 #TESTEOS
 #CONTRASEÑA--SALIDA ESPERADA(contraseña erronia o correcta)
@@ -106,3 +106,4 @@ print("has creado 3 password este es tu total de passwords correctos i incorrect
 #la septima contraseña ha dado el resultado esperado sin complicaciones
 #la octava contraseña ha dado el resultado esperado sin complicaciones
 #la novena contraseña ha dado el resultado esperado sin complicaciones
+#la decima i ultima contraseña dio el resultado esperado despues de cambiar if not (len(password)>=6) and (len(password)<=8) por if (len(password)<6) or (len(password)>8):
