@@ -1,9 +1,4 @@
-#75. Crea una lista con el siguiente nombre lista1 y su contenido: a,b,D,x,r,X,3,h,w,2,i. Presenta por pantalla los siguientes resultados:
-#a. Cantidad total de valores
-#b. Cantidad de números
-#c. Cantidad de letras
-#d. Cantidad de mayúsculas
-#e. Suma de los valores numéricos
+#78. A partir de la lista definida en el ejercicio 75, haz que el programa pregunte qué valor se desea eliminar de la lista, siendo únicamente los números los valores permitidos para suprimir
 numericos=[]
 mayus=0
 letras=0
@@ -25,3 +20,11 @@ print("cantidad de numericos: ",numeros)
 print("cantidad de letras: ",letras)
 print("cantidad de mayusculas: ",mayus)
 print("suma de los valors numericos: ",suma)
+
+stay=1
+while stay==1:
+    choice=int(input("quieres eliminar un valor de la lista?: no(1) si(2): "))
+    if choice==1:
+        stay=stay+420
+    else:
+        choiceagain=input("introduce el valor que quieres eliminar: ")
