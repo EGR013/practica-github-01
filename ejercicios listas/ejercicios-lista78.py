@@ -3,7 +3,7 @@ numericos=[]
 mayus=0
 letras=0
 numeros=0
-lista1=[" a","b","D","x","r","X","3","h","w","2","i"]
+lista1=["a","b","D","x","r","X","3","h","w","2","i"]
 longitud=len(lista1)
 for i in lista1:
     if i.isnumeric():
@@ -20,7 +20,7 @@ print("cantidad de numericos: ",numeros)
 print("cantidad de letras: ",letras)
 print("cantidad de mayusculas: ",mayus)
 print("suma de los valors numericos: ",suma)
-
+lista1.sort()
 stay=1
 while stay==1:
     choice=int(input("quieres eliminar un valor de la lista?: no(1) si(2): "))
@@ -28,3 +28,8 @@ while stay==1:
         stay=stay+420
     else:
         choiceagain=input("introduce el valor que quieres eliminar: ")
+        if choiceagain not in lista1:
+            print("esta variable no esta en la lista prueba otra variable")
+        else:
+            lista1.remove(choiceagain)
+            print(lista1)
