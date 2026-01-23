@@ -2,13 +2,31 @@
 import random
 lista=["casa","barco","gato","perro","madera","agua","puente","pantalón"]
 hit=1
+puntuacion=[]
 digito=random.choice(lista)
 points=8
+jugadas=1
 while hit==1:
     print(lista)
     adivinacion=input("adivina la palabra escogida: ")
     if adivinacion==digito:
         print("muy bien lo has adivinado!")
+        puntuacion.append(points)
+        elecion=input(int("quieres voler a jugar si(1) no(2): "))
+        if elecion==1:
+            points=points+8
+            jugadas=jugadas+1
+        else:
+            break
     else:
         print("incorrecto")
+        points=points-1
 
+media=jugadas*4
+print("tu puntuacion total a sido: ",sum(puntuacion))
+total=sum(puntuacion)
+print("ahora comprovare si tu puntuacion supera la media.....")
+if total>media:
+    print("tienes una suerte elevada porfavor apuesta con todo lo que te pertenence")
+else:
+    print("quizas es prudente que entres a un casino")
