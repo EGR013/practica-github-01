@@ -25,9 +25,21 @@ print("la media de castellano es: ",sum(castellano)/subject)
 print("la media de catalan es: ",sum(catalan)/subject)
 
 longitud=len(castellano)
-longitud=len(catalan)
+lonjitud=len(catalan)
 length=len(ingles)
+if length%2==0:
+    mi=ingles[length/2]/ingles[(length/2)-1]
+else:
+    mi=ingles[length/2]
+if longitud%2==0:
+    mcas=castellano[longitud/2]/castellano[(longitud/2)-1]
+else:
+    mcas=castellano[longitud/2]
+if lonjitud%2==0:
+    mcat=catalan[lonjitud/2]/catalan[(lonjitud/2)-1]
+else:
+    mcat=catalan[lonjitud/2]
 
-print("la mediana de ingles es: ",ingles[length/2])
-print("la mediana de castellano es: ",castellano[longitud/2])
-print("la mediana de catalan es: ",catalan[longitud/2])
+print("la mediana de ingles es: ",mi)
+print("la mediana de castellano es: ",mcas)
+print("la mediana de catalan es: ",mcat)
