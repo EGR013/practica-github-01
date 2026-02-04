@@ -52,10 +52,27 @@ if totalcorrectos==0:
     porcentajeokay=0
 else:
     porcentajeokay=round((lengthtotal/totalcorrectos)*100,1)
-porcentajenookay=round((lengthtotal/totalerrores)*100,1)
-porcentajecero=round((lengthtotal/cero)*100,1)
-porcentajeuno=round((lengthtotal/uno)*100,1)
-porcentajedos=round((lengthtotal/dos)*100,1)
+
+if totalerrores==0:
+    porcentajenookay=0
+else:
+    porcentajenookay=round((lengthtotal/totalerrores)*100,1)
+
+if cero==0:
+    porcentajecero=0
+else:    
+    porcentajecero=round((lengthtotal/cero)*100,1)
+
+if uno==0:
+    porcentajeuno=0
+else:
+    porcentajeuno=round((lengthtotal/uno)*100,1)
+
+if dos==0:
+    porcentajedos=0
+else:
+    porcentajedos=round((lengthtotal/dos)*100,1)
+
 while choices==0:
     choice2=int(input("escoje la opcion que te interesa: 1.listar NIF correctos ordenados de menor a mayor 2.Listar DNI incorrectos ordenados de menor a mayor 3.Número total de errores 4.Número total de DNIs correctos. 5.porcentaje de DNI correctos, incorrectos, errores de longitud, errores de número, no existentes. 6.abandonar el programa: "))
     if choice2==1:
