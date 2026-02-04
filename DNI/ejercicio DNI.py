@@ -76,19 +76,15 @@ else:
 while choices==0:
     choice2=int(input("escoje la opcion que te interesa: 1.listar NIF correctos ordenados de menor a mayor 2.Listar DNI incorrectos ordenados de menor a mayor 3.Número total de errores 4.Número total de DNIs correctos. 5.porcentaje de DNI correctos, incorrectos, errores de longitud, errores de número, no existentes. 6.abandonar el programa: "))
     if choice2==1:
-        correct.sort()
         print("Lista de NIFs correctos ordenados de menor a mayor: ",correct)
         choices=1
     if choice2==2:
-        incorrect.sort()
         print("Lista de DNIs incorrectos ordenados de menor a mayor: ",incorrect)
         choices=2
     if choice2==3:
-        totalerrores=int(cero+uno+dos)
         print("Número total de errores: ",totalerrores)
         choices=3
     if choice2==4:
-        totalcorrectos=int(lista_intentos.count(3))
         print("Número total de DNIs correctos: ",totalcorrectos)
         choices=4
     if choice2==5:
