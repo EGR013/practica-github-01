@@ -18,7 +18,7 @@
 
 number=list(str(input()).split())
 if len(number)<2:
-    number.append(str(input()).split())
+    number.append(input())
 
 
 numbers=int(number[0])+int(number[1])
