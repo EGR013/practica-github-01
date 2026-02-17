@@ -1,0 +1,13 @@
+ff=list(str(input()).split())
+a1=ff[0]
+b1=ff[1]
+a2=ff[2]
+b2=ff[3]
+
+start=list.append(a1,b1)
+end=list.append(a2,b2)
+
+if start > end:
+    print("[]")
+else:
+    print(f"[{start},{end}]")
