@@ -1,11 +1,11 @@
+letra=input()
 import random
 life=1
 death=2
 limbo=0
 isodamion=1
-letraog=str(input())
 permanent=0
-letra=letraog
+letra1=letra
 for x in range(1,1000):
     limbo=random.randint(life,death)
     if limbo==life:
@@ -13,8 +13,11 @@ for x in range(1,1000):
     if limbo==death:
         letra=letra.lower()
     
-    if (letra==letraog)==False:
-        print(letra)
+    if letra1==letra:
+        if limbo==life:
+            print("uppercase")
+        if limbo==death:
+            print("lowercase")
         break
     else:
         limbo=0
@@ -22,5 +25,7 @@ for x in range(1,1000):
 
 
 
-
-    
+if letra in ("aiuoeAEIOU"):
+    print("vowel")
+else:
+    print("consonant")
