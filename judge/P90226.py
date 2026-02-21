@@ -1,9 +1,12 @@
-import math
+janb4algan=list(str(input()).split())
+a=str(janb4algan[0])
+b=str(janb4algan[1])
 
-x = float(input())
 
-floor_x = math.floor(x)
-ceil_x = math.ceil(x)
-round_x = math.floor(x + 0.5)
+if a<b:
+    print(a,"<",b)
+if b<a:
+        print(a,">",b)
+if a==b:
+        print(a,"=",b)
 
-print(floor_x, ceil_x, round_x)
