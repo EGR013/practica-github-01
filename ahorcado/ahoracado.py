@@ -20,21 +20,22 @@ while choice_final==1:
     choice_add=0
     forever=1
     lista_baneada=[]
-    palabrasecreta=Lista_palabrasecreta[random.randint(0,len(Lista_palabrasecreta))]
+    Lista_partida=[]
+    palabrasecreta=Lista_palabrasecreta[random.randint(0,len(Lista_palabrasecreta)-1)]
     choice_add=int(input("antes de empezar quieres añadir alguna palabra a la lista de palabras secretas? si(1) o no(2): "))
     if choice_add==1:
         Lista_palabrasecreta.append(input())
-        Lista_palabrasecreta=Lista_palabrasecreta[random.randint(0,len(Lista_palabrasecreta))]
+        palabrasecreta=Lista_palabrasecreta[random.randint(0,len(Lista_palabrasecreta))]
     for x in range(0,len(palabrasecreta)):
         Lista_partida.append("_")
     choices_almost=1
-    palabrasecreta.upper()
+    palabrasecreta=palabrasecreta.lower()
 
     while choices_almost==1:
         c=0
         print(Lista_partida)
         letra=input("ahora es hora de intentar adivinar la palabra introduce una letra: ")
-        letra.upper()
+        letra=letra.lower()
         if letra.isalpha() and not letra in lista_baneada:
             for i in range(0,len(palabrasecreta)):
                 if letra==palabrasecreta[i]:
@@ -50,14 +51,14 @@ while choice_final==1:
                 print("fallo",Lista_ahorcado_form2)
                 c==0
                 p=p+1
-    if p==8:
-        print("has perdido la pertida la palabra secreta era: ",palabrasecreta,"quieres iniciar otra ronda?")
-        choice_final=int(input("introduce 1 si quieres continuar,introduce 0 si quieres dejar el programa: "))
-        choices_almost=0
-    if len(Lista_partida.clear("_"))==len(palabrasecreta):
-        print("muy bien! la palbra correcta era",Lista_partida,"quieres jugar otra partida?")
-        choice_final=int(input("introduce 1 si quieres continuar,introduce 0 si quieres dejar el programa: "))
-        choices_almost=0
+        if p==8:
+            print("has perdido la pertida la palabra secreta era: ",palabrasecreta,"quieres iniciar otra ronda?")
+            choice_final=int(input("introduce 1 si quieres continuar,introduce 0 si quieres dejar el programa: "))
+            choices_almost=0
+        if "_" not in Lista_partida:
+            print("muy bien! la palbra correcta era",Lista_partida,"quieres jugar otra partida?")
+            choice_final=int(input("introduce 1 si quieres continuar,introduce 0 si quieres dejar el programa: "))
+            choices_almost=0
 
 
 
