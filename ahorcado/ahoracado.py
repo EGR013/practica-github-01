@@ -2,7 +2,13 @@ import random
 import unicodedata
 import time
 import math
+import datetime
 #while true baneado
+start=datetime.datetime.now()
+start_calc=[]
+start_calc.append(start.hour)
+start_calc.append(start.minute)
+start_calc.append(start.second)
 Lista_palabrasecreta=["Ahorcado","solicitar","encontrar","situación","onstruir","esperanza", "cognitivo", "condición","esbirro","Hipopotomonstrosesquipedaliofobia"]
 Lista_partida=[]
 lista_ahorcado_form1=["A","H","O","R","C","A","D","O"]
@@ -43,10 +49,12 @@ while choice_final==1:
                     c=c+1
             if c>0:
                 lista_baneada.append(letra)
+                lista_aciertos.append(letra)
                 print("acierto",Lista_partida)
                 c==0
             else:
-                lista_baneada.append
+                lista_baneada.append(letra)
+                Lista_errores.append(letra)
                 Lista_ahorcado_form2[p]=lista_ahorcado_form1[p]
                 print("fallo",Lista_ahorcado_form2)
                 c==0
@@ -60,6 +68,17 @@ while choice_final==1:
             choice_final=int(input("introduce 1 si quieres continuar,introduce 0 si quieres dejar el programa: "))
             choices_almost=0
 
+finish=datetime.datetime.now()
+finish_calc=[]
+finish_calc.append(finish.hour)
+finish_calc.append(finish.minute)
+finish_calc.append(finish.hour)
+minuts=(finish.minute)-(start.minute)
+hours=(finish.hour)-(start.hour)
+seconds=(finish.second)-(start.second)
+print("este es tu numero de aciertos: ",len(lista_aciertos))
+print("esto es tu numero de errores: ",len(Lista_errores))
+print("este es el tiempo que tardaste en acabar la partida puesto en el siguiente formato(horas:minutos:segundos) ",hours,":",minuts,":",seconds)
 
 
     
