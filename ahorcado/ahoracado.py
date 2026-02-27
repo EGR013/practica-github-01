@@ -4,6 +4,8 @@ import time
 import math
 import datetime
 #while true baneado
+excepciones=("áéíóú")
+correctas=("aeiou")
 start=datetime.datetime.now()
 start_calc=[]
 start_calc.append(start.hour)
