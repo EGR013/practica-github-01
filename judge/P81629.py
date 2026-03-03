@@ -13,18 +13,27 @@
 #Coins of 5 cents= 
 #Coins of 2 cents=
 #Coins of 1 cents=
-Banknotes500euros=500
-Banknotes200euros= 200
-Banknotes100euros= 100
-Banknotes50euros= 50
-Banknotesof20euros= 20
-Banknotes10euros= 10
-Banknotes5euros= 5
-Coins2euros= 2
-Coins1euro=1
-Coins50cents= 0.50
-Coins20cents= 0.20
-Coins10cents= 0.10
-Coins5cents= 0.05
-Coins2cents=0.02
-Coins1cents=0.01
+
+total_cents = e * 100 + c
+Banknotes500euros=500000
+Banknotes200euros= 20000
+Banknotes100euros= 10000
+Banknotes50euros= 5000
+Banknotesof20euros= 2000
+Banknotes10euros= 1000
+Banknotes5euros= 500
+Coins2euros= 200
+Coins1euro=100
+Coins50cents= 50
+Coins20cents= 20
+Coins10cents= 10
+Coins5cents= 5
+Coins2cents=2
+Coins1cents=1
+
+
+
+for value, name in denominations:
+    count = total_cents // value
+    print(f"{name}: {count}")
+    total_cents -= count * value
