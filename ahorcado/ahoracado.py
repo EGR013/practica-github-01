@@ -22,8 +22,10 @@ life=[]
 death=[]
 letra=""
 choice_final=1
+file=open("text.txt","r")
 
 while choice_final==1:
+    Lista_ahorcado_form2=["_","_","_","_","_","_","_","_"]
     p=0
     choice_add=0
     forever=1
@@ -81,8 +83,12 @@ seconds=(finish.second)-(start.second)
 print("este es tu numero de aciertos: ",len(lista_aciertos))
 print("esto es tu numero de errores: ",len(Lista_errores))
 print("este es el tiempo que tardaste en acabar la partida puesto en el siguiente formato(horas:minutos:segundos) ",hours,":",minuts,":",seconds)
-
-
-    
-
+file.close()
+save=int(input("quieres guardar tus estadisticas o prefieres dejar el juego: si(1) No(2): "))
+if save==1:
+    file=open("texts.txt","w+")
+    file.write(start=datetime.datetime.now(),Lista_errores=Lista_errores,lista_aciertos=lista_aciertos)
+    file.close()
+else:
+    print("okay gracias por jugar!")
 

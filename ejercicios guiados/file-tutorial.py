@@ -6,6 +6,8 @@
 #a: Abrir fichero para lectura. Se creará el fichero si no exsite. El puntero se posiciona al final del fichero.
 #a+: Abrir fichero para lectura y escritura. Se creará el fichero si no exsite. El puntero se posiciona al final del fichero.
 
-total = open("Text.txt","r")
+total = open("Text.txt","r+")
 texto = total.read()
 print(texto)
+total.write("and I'm looking for more")
+total.close()
